@@ -1,0 +1,104 @@
+[
+  {
+    "assetId": "nvda",
+    "name": "NVIDIA",
+    "ticker": "NVDA",
+    "assetType": "stock",
+    "currency": "USD",
+    "classifications": {
+      "geography": "geo_us",
+      "theme": "theme_semiconductor",
+      "role": "role_growth"
+    },
+    "dataSource": {
+      "mode": "manual",
+      "provider": null
+    },
+    "isActive": true
+  },
+  {
+    "assetId": "soxx",
+    "name": "iShares Semiconductor ETF",
+    "ticker": "SOXX",
+    "assetType": "etf",
+    "currency": "USD",
+    "classifications": {
+      "geography": "geo_us",
+      "theme": "theme_semiconductor",
+      "role": "role_growth"
+    },
+    "dataSource": {
+      "mode": "manual",
+      "provider": null
+    },
+    "isActive": true
+  },
+  {
+    "assetId": "jp_trading_etf",
+    "name": "Japan Trading ETF",
+    "ticker": "JPTR",
+    "assetType": "etf",
+    "currency": "JPY",
+    "classifications": {
+      "geography": "geo_jp",
+      "theme": "theme_power_infra",
+      "role": "role_defensive"
+    },
+    "dataSource": {
+      "mode": "manual",
+      "provider": null
+    },
+    "isActive": true
+  },
+  {
+    "assetId": "kr_nuclear_etf",
+    "name": "Korea Nuclear ETF",
+    "ticker": "KRNUC",
+    "assetType": "etf",
+    "currency": "KRW",
+    "classifications": {
+      "geography": "geo_kr",
+      "theme": "theme_defense_nuclear",
+      "role": "role_growth"
+    },
+    "dataSource": {
+      "mode": "manual",
+      "provider": null
+    },
+    "isActive": true
+  },
+  {
+    "assetId": "bio_etf",
+    "name": "Global Bio ETF",
+    "ticker": "BIOG",
+    "assetType": "etf",
+    "currency": "USD",
+    "classifications": {
+      "geography": "geo_us",
+      "theme": "theme_bio",
+      "role": "role_growth"
+    },
+    "dataSource": {
+      "mode": "manual",
+      "provider": null
+    },
+    "isActive": true
+  },
+  {
+    "assetId": "kr_cash",
+    "name": "원화 현금",
+    "ticker": "KRW-CASH",
+    "assetType": "cash",
+    "currency": "KRW",
+    "classifications": {
+      "geography": "geo_hedge",
+      "theme": "theme_power_infra",
+      "role": "role_hedge"
+    },
+    "dataSource": {
+      "mode": "manual",
+      "provider": null
+    },
+    "isActive": true
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "id": "invest-gpt",
+    "category": "investing",
+    "title": "투자 분석 GPT",
+    "description": "시장 분석과 포트폴리오 점검을 위한 링크",
+    "url": "https://chatgpt.com/"
+  },
+  {
+    "id": "content-gpt",
+    "category": "content",
+    "title": "콘텐츠 작성 GPT",
+    "description": "쇼츠, 분석글, 아이디어 정리를 위한 링크",
+    "url": "https://chatgpt.com/"
+  },
+  {
+    "id": "travel-gpt",
+    "category": "travel",
+    "title": "여행 플래너 GPT",
+    "description": "여행 일정과 아이디어 정리를 위한 링크",
+    "url": "https://chatgpt.com/"
+  }
+]

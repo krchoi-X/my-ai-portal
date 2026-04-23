@@ -1,0 +1,16 @@
+[
+  { "bucketId": "geo_kr", "axisId": "geography", "name": "국내", "displayOrder": 1 },
+  { "bucketId": "geo_us", "axisId": "geography", "name": "미국", "displayOrder": 2 },
+  { "bucketId": "geo_jp", "axisId": "geography", "name": "일본", "displayOrder": 3 },
+  { "bucketId": "geo_hedge", "axisId": "geography", "name": "헷지", "displayOrder": 4 },
+
+  { "bucketId": "theme_semiconductor", "axisId": "theme", "name": "반도체", "displayOrder": 1 },
+  { "bucketId": "theme_power_infra", "axisId": "theme", "name": "전력/인프라", "displayOrder": 2 },
+  { "bucketId": "theme_defense_nuclear", "axisId": "theme", "name": "방산/원자력", "displayOrder": 3 },
+  { "bucketId": "theme_bio", "axisId": "theme", "name": "바이오", "displayOrder": 4 },
+
+  { "bucketId": "role_growth", "axisId": "role", "name": "성장", "displayOrder": 1 },
+  { "bucketId": "role_defensive", "axisId": "role", "name": "방어", "displayOrder": 2 },
+  { "bucketId": "role_dividend", "axisId": "role", "name": "배당", "displayOrder": 3 },
+  { "bucketId": "role_hedge", "axisId": "role", "name": "헷지", "displayOrder": 4 }
+]

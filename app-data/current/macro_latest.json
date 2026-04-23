@@ -1,0 +1,12 @@
+{
+  "updatedAt": "2026-04-23T09:30:00+09:00",
+  "items": [
+    { "indicatorId": "us10y", "value": 4.42, "change1d": -0.03, "trend7d": "down" },
+    { "indicatorId": "dxy", "value": 104.21, "change1d": 0.18, "trend7d": "up" },
+    { "indicatorId": "sp500", "value": 5278.35, "change1d": 12.4, "trend7d": "up" },
+    { "indicatorId": "nasdaq100", "value": 18402.1, "change1d": 55.2, "trend7d": "up" },
+    { "indicatorId": "wti", "value": 81.25, "change1d": -0.52, "trend7d": "flat" },
+    { "indicatorId": "gold", "value": 2348.4, "change1d": 8.7, "trend7d": "up" },
+    { "indicatorId": "vix", "value": 17.3, "change1d": 1.1, "trend7d": "up" }
+  ]
+}

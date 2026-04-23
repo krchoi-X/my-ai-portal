@@ -1,0 +1,16 @@
+[
+  { "axisId": "geography", "bucketId": "geo_kr", "targetWeightPct": 50, "rebalanceThresholdPct": 5 },
+  { "axisId": "geography", "bucketId": "geo_us", "targetWeightPct": 20, "rebalanceThresholdPct": 3 },
+  { "axisId": "geography", "bucketId": "geo_jp", "targetWeightPct": 20, "rebalanceThresholdPct": 3 },
+  { "axisId": "geography", "bucketId": "geo_hedge", "targetWeightPct": 10, "rebalanceThresholdPct": 2 },
+
+  { "axisId": "theme", "bucketId": "theme_semiconductor", "targetWeightPct": 30, "rebalanceThresholdPct": 4 },
+  { "axisId": "theme", "bucketId": "theme_power_infra", "targetWeightPct": 20, "rebalanceThresholdPct": 4 },
+  { "axisId": "theme", "bucketId": "theme_defense_nuclear", "targetWeightPct": 10, "rebalanceThresholdPct": 3 },
+  { "axisId": "theme", "bucketId": "theme_bio", "targetWeightPct": 10, "rebalanceThresholdPct": 3 },
+
+  { "axisId": "role", "bucketId": "role_growth", "targetWeightPct": 50, "rebalanceThresholdPct": 5 },
+  { "axisId": "role", "bucketId": "role_defensive", "targetWeightPct": 20, "rebalanceThresholdPct": 3 },
+  { "axisId": "role", "bucketId": "role_dividend", "targetWeightPct": 10, "rebalanceThresholdPct": 3 },
+  { "axisId": "role", "bucketId": "role_hedge", "targetWeightPct": 20, "rebalanceThresholdPct": 2 }
+]

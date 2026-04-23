@@ -1,0 +1,17 @@
+[
+  {
+    "axisId": "geography",
+    "name": "지역",
+    "displayOrder": 1
+  },
+  {
+    "axisId": "theme",
+    "name": "테마",
+    "displayOrder": 2
+  },
+  {
+    "axisId": "role",
+    "name": "역할",
+    "displayOrder": 3
+  }
+]

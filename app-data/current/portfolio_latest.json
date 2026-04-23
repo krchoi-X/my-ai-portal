@@ -1,0 +1,42 @@
+{
+  "updatedAt": "2026-04-23T09:30:00+09:00",
+  "totalValueKrw": 253430000,
+  "weeklyChangePct": 1.42,
+  "profitLossKrw": 3531000,
+  "status": "watch",
+  "unclassifiedAssetCount": 0,
+  "axisSummaries": [
+    {
+      "axisId": "geography",
+      "axisName": "지역",
+      "items": [
+        { "bucketId": "geo_kr", "name": "국내", "targetWeightPct": 50, "currentWeightPct": 38, "deviationPct": -12, "thresholdPct": 5, "status": "warning" },
+        { "bucketId": "geo_us", "name": "미국", "targetWeightPct": 20, "currentWeightPct": 32, "deviationPct": 12, "thresholdPct": 3, "status": "warning" },
+        { "bucketId": "geo_jp", "name": "일본", "targetWeightPct": 20, "currentWeightPct": 18, "deviationPct": -2, "thresholdPct": 3, "status": "ok" },
+        { "bucketId": "geo_hedge", "name": "헷지", "targetWeightPct": 10, "currentWeightPct": 12, "deviationPct": 2, "thresholdPct": 2, "status": "warning" }
+      ]
+    },
+    {
+      "axisId": "theme",
+      "axisName": "테마",
+      "items": [
+        { "bucketId": "theme_semiconductor", "name": "반도체", "targetWeightPct": 30, "currentWeightPct": 34, "deviationPct": 4, "thresholdPct": 4, "status": "warning" },
+        { "bucketId": "theme_power_infra", "name": "전력/인프라", "targetWeightPct": 20, "currentWeightPct": 15, "deviationPct": -5, "thresholdPct": 4, "status": "warning" },
+        { "bucketId": "theme_defense_nuclear", "name": "방산/원자력", "targetWeightPct": 10, "currentWeightPct": 11, "deviationPct": 1, "thresholdPct": 3, "status": "ok" },
+        { "bucketId": "theme_bio", "name": "바이오", "targetWeightPct": 10, "currentWeightPct": 8, "deviationPct": -2, "thresholdPct": 3, "status": "ok" }
+      ]
+    }
+  ],
+  "topOverweight": {
+    "axisId": "geography",
+    "bucketId": "geo_us",
+    "name": "미국",
+    "deviationPct": 12
+  },
+  "topUnderweight": {
+    "axisId": "geography",
+    "bucketId": "geo_kr",
+    "name": "국내",
+    "deviationPct": -12
+  }
+}
