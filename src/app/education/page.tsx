@@ -6,9 +6,9 @@ export default async function EducationPage() {
 
   return (
     <SimpleHubPage
-      eyebrow="Education"
-      title="Education hub."
-      description="A simple link area for learning resources. v0.1 intentionally keeps this section minimal."
+      eyebrow="교육"
+      title="학습 기록 허브"
+      description="학습 주제, 강의 메모, 이전 ChatGPT 정리물을 모으기 위한 가벼운 시작점입니다. v0.1에서는 링크와 기록 자리만 유지합니다."
       links={links}
     />
   );

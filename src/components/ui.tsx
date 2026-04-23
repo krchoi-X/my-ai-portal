@@ -1,4 +1,3 @@
-import Link from "next/link";
 import type { ReactNode } from "react";
 
 export function PageIntro({
@@ -13,16 +12,16 @@ export function PageIntro({
   actions?: ReactNode;
 }) {
   return (
-    <section className="grain-overlay overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 shadow-2xl shadow-black/30 sm:p-8">
-      <div className="relative flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+    <section className="overflow-hidden rounded-3xl border border-white/10 bg-white/[0.035] p-5 shadow-xl shadow-black/20 sm:p-6">
+      <div className="relative flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.34em] text-amber-200/70">
             {eyebrow}
           </p>
-          <h2 className="mt-4 max-w-4xl text-4xl font-semibold tracking-tight text-stone-50 sm:text-6xl">
+          <h2 className="mt-3 max-w-4xl text-3xl font-semibold tracking-tight text-stone-50 sm:text-4xl">
             {title}
           </h2>
-          <p className="mt-4 max-w-2xl text-base leading-7 text-stone-300">
+          <p className="mt-3 max-w-2xl text-sm leading-6 text-stone-300">
             {description}
           </p>
         </div>
@@ -44,8 +43,8 @@ export function Card({
   className?: string;
 }) {
   return (
-    <section className={`rounded-3xl border border-white/10 bg-[#10130f]/85 p-5 shadow-xl shadow-black/20 ${className}`}>
-      <div className="mb-5 flex items-start justify-between gap-4">
+    <section className={`rounded-3xl border border-white/10 bg-[#10130f]/90 p-5 shadow-lg shadow-black/15 ${className}`}>
+      <div className="mb-4 flex items-start justify-between gap-4">
         <div>
           {kicker ? (
             <p className="text-xs font-semibold uppercase tracking-[0.26em] text-stone-500">
@@ -61,6 +60,14 @@ export function Card({
 }
 
 export function StatusBadge({ status }: { status: string }) {
+  const labelByStatus: Record<string, string> = {
+    active: "활성",
+    caution: "주의",
+    inactive: "비활성",
+    ok: "정상",
+    warning: "점검",
+    watch: "관찰",
+  };
   const tone =
     status === "ok"
       ? "border-emerald-200/30 bg-emerald-300/10 text-emerald-100"
@@ -70,23 +77,7 @@ export function StatusBadge({ status }: { status: string }) {
 
   return (
     <span className={`rounded-full border px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] ${tone}`}>
-      {status}
+      {labelByStatus[status] ?? status}
     </span>
-  );
-}
-
-export function HubLinks({ links }: { links: Array<{ label: string; href: string }> }) {
-  return (
-    <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
-      {links.map((link) => (
-        <Link
-          key={link.href}
-          href={link.href}
-          className="rounded-2xl border border-white/10 bg-white/[0.04] p-4 text-sm font-semibold text-stone-200 transition hover:border-amber-200/40 hover:bg-amber-200/10"
-        >
-          {link.label}
-        </Link>
-      ))}
-    </div>
   );
 }

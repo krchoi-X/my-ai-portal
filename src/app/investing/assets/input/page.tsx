@@ -9,23 +9,23 @@ export default async function AssetInputPage() {
   return (
     <div className="space-y-6">
       <PageIntro
-        eyebrow="Asset Input"
-        title="Manual holdings entry."
-        description="Asset input is separate from classification. This table is prepared for manual local-file updates without introducing a database or API."
+        eyebrow="자산 입력"
+        title="수동 보유자산 입력"
+        description="보유자산 입력과 분류 연결을 분리해서 관리합니다. 이 화면은 데이터베이스나 API 없이 로컬 파일 입력 흐름을 위한 구조입니다."
       />
-      <Card title="Holdings Draft" kicker="From portfolio_assets.json and raw holdings CSV">
+      <Card title="보유자산 입력표" kicker="portfolio_assets.json 및 raw CSV 기준">
         <div className="overflow-x-auto">
           <table className="w-full min-w-[980px] border-separate border-spacing-y-2 text-left text-sm">
             <thead className="text-xs uppercase tracking-[0.18em] text-stone-500">
               <tr>
-                <th className="px-3 py-2">Asset name</th>
-                <th className="px-3 py-2">Ticker</th>
-                <th className="px-3 py-2">Type</th>
-                <th className="px-3 py-2">Currency</th>
-                <th className="px-3 py-2">Quantity</th>
-                <th className="px-3 py-2">Price</th>
-                <th className="px-3 py-2">Market value</th>
-                <th className="px-3 py-2">Note</th>
+                <th className="px-3 py-2">자산명</th>
+                <th className="px-3 py-2">티커</th>
+                <th className="px-3 py-2">유형</th>
+                <th className="px-3 py-2">통화</th>
+                <th className="px-3 py-2">수량</th>
+                <th className="px-3 py-2">가격</th>
+                <th className="px-3 py-2">평가금액</th>
+                <th className="px-3 py-2">메모</th>
               </tr>
             </thead>
             <tbody>
@@ -56,13 +56,13 @@ export default async function AssetInputPage() {
                       {holding ? formatKrw(Number(holding.market_value_krw)) : ""}
                     </td>
                     <td className="rounded-r-2xl border-y border-r border-white/10 bg-white/[0.03] px-3 py-3 text-stone-500">
-                      {holding?.note || "Manual entry"}
+                      {holding?.note || "수동 입력"}
                     </td>
                   </tr>
                 );
               })}
               <tr>
-                {["Asset name", "Ticker", "Asset type", "Currency", "Quantity", "Price", "Market value", "Note"].map((field, index) => (
+                {["자산명", "티커", "유형", "통화", "수량", "가격", "평가금액", "메모"].map((field, index) => (
                   <td
                     key={field}
                     className={`${index === 0 ? "rounded-l-2xl border-l" : ""} ${index === 7 ? "rounded-r-2xl border-r" : ""} border-y border-dashed border-amber-200/25 bg-amber-200/5 px-3 py-3`}

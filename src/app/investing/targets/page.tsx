@@ -7,9 +7,9 @@ export default async function TargetsPage() {
   return (
     <div className="space-y-6">
       <PageIntro
-        eyebrow="Targets"
-        title="Axis targets are editable by structure."
-        description="This first pass renders mock-editable controls from local target JSON. The layout keeps axes, buckets, and thresholds separated for future file writes."
+        eyebrow="목표"
+        title="축별 목표 비중"
+        description="로컬 목표 JSON을 기준으로 축, 버킷, 목표 비중, 리밸런싱 기준을 확인합니다. v0.1에서는 실제 저장 전 구조를 먼저 정리합니다."
       />
       <div className="grid gap-6 xl:grid-cols-3">
         {axes
@@ -49,8 +49,8 @@ export default async function TargetsPage() {
                           />
                         </div>
                         <div className="mt-2 flex justify-between text-xs uppercase tracking-[0.18em] text-stone-500">
-                          <span>Target %</span>
-                          <span>Threshold %</span>
+                          <span>목표 %</span>
+                          <span>기준 %</span>
                         </div>
                       </div>
                     );

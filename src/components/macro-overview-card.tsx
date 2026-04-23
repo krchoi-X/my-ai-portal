@@ -15,7 +15,7 @@ export function MacroOverviewCard({
     .sort((a, b) => (a.definition?.displayOrder ?? 99) - (b.definition?.displayOrder ?? 99));
 
   return (
-    <Card title="Macro Overview" kicker={`Updated ${formatDateTime(latest.updatedAt)}`}>
+    <Card title="매크로 현황" kicker={`업데이트 ${formatDateTime(latest.updatedAt)}`}>
       <div className="grid gap-3 sm:grid-cols-2">
         {rows.map((item) => (
           <div key={item.indicatorId} className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
@@ -25,7 +25,7 @@ export function MacroOverviewCard({
                   {item.definition?.name ?? item.indicatorId}
                 </p>
                 <p className="mt-1 text-xs uppercase tracking-[0.22em] text-stone-500">
-                  {item.definition?.unit ?? "value"}
+                  {item.definition?.unit ?? "값"}
                 </p>
               </div>
               <TrendPill trend={item.trend7d} />
@@ -47,6 +47,11 @@ export function MacroOverviewCard({
 }
 
 function TrendPill({ trend }: { trend: string }) {
+  const labelByTrend: Record<string, string> = {
+    down: "하락",
+    flat: "보합",
+    up: "상승",
+  };
   const tone =
     trend === "up"
       ? "border-emerald-200/20 bg-emerald-200/10 text-emerald-100"
@@ -56,7 +61,7 @@ function TrendPill({ trend }: { trend: string }) {
 
   return (
     <span className={`rounded-full border px-2.5 py-1 text-xs font-semibold uppercase tracking-[0.18em] ${tone}`}>
-      {trend}
+      {labelByTrend[trend] ?? trend}
     </span>
   );
 }

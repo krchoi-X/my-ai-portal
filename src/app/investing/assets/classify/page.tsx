@@ -4,16 +4,17 @@ import { getInvestingData } from "@/lib/local-data";
 export default async function AssetClassifyPage() {
   const { axes, buckets, assets } = await getInvestingData();
   const bucketNameById = new Map(buckets.map((bucket) => [bucket.bucketId, bucket.name]));
+  const axisNameById = new Map(axes.map((axis) => [axis.axisId, axis.name]));
 
   return (
     <div className="space-y-6">
       <PageIntro
-        eyebrow="Classify"
-        title="Assign each asset to one bucket per axis."
-        description="This visual drag-and-drop skeleton renders current assignments from portfolio_assets.json and keeps the model single-bucket per axis."
+        eyebrow="분류 연결"
+        title="자산별 버킷 연결"
+        description="각 자산은 축마다 하나의 버킷만 가집니다. 현재는 portfolio_assets.json의 분류를 시각적으로 확인하고, 향후 드래그 앤 드롭 입력으로 확장할 구조입니다."
       />
       <div className="grid gap-6 xl:grid-cols-[0.9fr_1.7fr]">
-        <Card title="Asset List" kicker="Drag source skeleton">
+        <Card title="자산 목록" kicker="드래그 원본 자리">
           <div className="space-y-3">
             {assets.map((asset) => (
               <div key={asset.assetId} draggable className="cursor-grab rounded-2xl border border-white/10 bg-white/[0.04] p-4 active:cursor-grabbing">
@@ -29,7 +30,7 @@ export default async function AssetClassifyPage() {
                 <div className="mt-3 flex flex-wrap gap-2">
                   {Object.entries(asset.classifications).map(([axisId, bucketId]) => (
                     <span key={axisId} className="rounded-full border border-white/10 bg-black/20 px-3 py-1 text-xs text-stone-300">
-                      {axisId}: {bucketNameById.get(bucketId) ?? bucketId}
+                      {axisNameById.get(axisId) ?? axisId}: {bucketNameById.get(bucketId) ?? bucketId}
                     </span>
                   ))}
                 </div>
@@ -46,7 +47,7 @@ export default async function AssetClassifyPage() {
                 .toSorted((a, b) => a.displayOrder - b.displayOrder);
 
               return (
-                <Card key={axis.axisId} title={axis.name} kicker="Drop zones">
+                <Card key={axis.axisId} title={axis.name} kicker="버킷 영역">
                   <div className="space-y-3">
                     {axisBuckets.map((bucket) => {
                       const assignedAssets = assets.filter(
