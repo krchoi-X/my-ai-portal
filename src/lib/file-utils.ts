@@ -1,4 +1,4 @@
-import { access, appendFile, readFile, writeFile } from "node:fs/promises";
+import { access, appendFile, mkdir, readdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 export const dataRoot = path.join(process.cwd(), "app-data");
@@ -10,7 +10,9 @@ export async function readJsonFile<T>(relativePath: string): Promise<T> {
 
 export async function writeJsonFile<T>(relativePath: string, data: T) {
   const serialized = `${JSON.stringify(data, null, 2)}\n`;
-  await writeFile(resolveDataPath(relativePath), serialized, "utf8");
+  const filePath = resolveDataPath(relativePath);
+  await mkdir(path.dirname(filePath), { recursive: true });
+  await writeFile(filePath, serialized, "utf8");
 }
 
 export async function appendCsvRow(relativePath: string, values: Array<string | number>) {
@@ -25,6 +27,27 @@ export async function ensureCsvFile(relativePath: string, headerColumns: string[
     await access(filePath);
   } catch {
     await writeFile(filePath, `${headerColumns.map(serializeCsvValue).join(",")}\n`, "utf8");
+  }
+}
+
+export async function ensureDirectory(relativePath: string) {
+  await mkdir(resolveDataPath(relativePath), { recursive: true });
+}
+
+export async function listFiles(relativePath: string) {
+  try {
+    return await readdir(resolveDataPath(relativePath));
+  } catch {
+    return [];
+  }
+}
+
+export async function fileExists(relativePath: string) {
+  try {
+    await access(resolveDataPath(relativePath));
+    return true;
+  } catch {
+    return false;
   }
 }
 

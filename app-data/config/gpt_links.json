@@ -1,0 +1,35 @@
+[
+  {
+    "id": "invest-gpt",
+    "category": "investing",
+    "title": "[Wall St AI Committee] 투자 자문 파트너 (20260329)",
+    "description": "시장 분석과 포트폴리오 점검을 위한 링크",
+    "url": "https://chatgpt.com/g/g-69c09a8f78a0819185dc985deef69801-wall-st-ai-committee-tuja-jamun-pateuneo-20260329",
+    "isActive": true,
+    "sortOrder": 10,
+    "createdAt": "2026-04-23T09:30:00+09:00",
+    "updatedAt": "2026-04-23T09:31:27.773Z"
+  },
+  {
+    "id": "content-gpt",
+    "category": "content",
+    "title": "Graphic Novel Maker",
+    "description": "아이디어를 이용해 그래픽노블을 만들어주는 GPT",
+    "url": "https://chatgpt.com/g/g-69d76efd5b8c8191b28458b4b2cc239d-graphic-novel-maker",
+    "isActive": true,
+    "sortOrder": 20,
+    "createdAt": "2026-04-23T09:30:00+09:00",
+    "updatedAt": "2026-04-23T09:32:43.857Z"
+  },
+  {
+    "id": "travel-gpt",
+    "category": "content",
+    "title": "AI 활용 구조화 코치",
+    "description": "여행 일정과 아이디어 정리를 위한 링크",
+    "url": "https://chatgpt.com/g/g-69d30f31e580819190f774b9dc320761-ai-hwalyong-gujohwa-koci-nae-munjereul-aireul-hwalyonghae-puldorog-dowajuneun-hagseub-gpt",
+    "isActive": true,
+    "sortOrder": 30,
+    "createdAt": "2026-04-23T09:30:00+09:00",
+    "updatedAt": "2026-04-23T09:33:51.926Z"
+  }
+]

@@ -69,6 +69,36 @@ export type LinkItem = {
   url: string;
 };
 
+export type HubCategory = "travel" | "content" | "education" | "health" | "investing";
+
+export type GptLink = {
+  id: string;
+  category: HubCategory;
+  title: string;
+  description: string;
+  url: string;
+  isActive: boolean;
+  sortOrder: number;
+  createdAt: string;
+  updatedAt: string;
+};
+
+export type HubRecord = {
+  id: string;
+  type: string;
+  title: string;
+  gptId: string;
+  gptName: string;
+  gptLink: string;
+  createdAt: string;
+  updatedAt: string;
+  initialPrompt: string;
+  summary: string;
+  tags: string[];
+  status: string;
+  memoryCandidate: boolean;
+};
+
 export type PortfolioAxis = {
   axisId: string;
   name: string;
