@@ -7,14 +7,14 @@
     "currency": "USD",
     "classifications": {
       "geography": "geo_us",
-      "theme": "theme_semiconductor",
-      "role": "role_growth"
+      "role": "role_growth",
+      "theme": "theme_semiconductor"
     },
     "dataSource": {
       "mode": "manual",
       "provider": null
     },
-    "isActive": true
+    "isActive": false
   },
   {
     "assetId": "soxx",
@@ -100,5 +100,56 @@
       "provider": null
     },
     "isActive": true
+  },
+  {
+    "assetId": "1",
+    "assetType": "stock",
+    "classifications": {
+      "geography": "geo_kr",
+      "role": "role_growth",
+      "theme": "theme_semiconductor"
+    },
+    "currency": "KRW",
+    "dataSource": {
+      "mode": "manual",
+      "provider": null
+    },
+    "isActive": true,
+    "name": "Samsung elec.",
+    "ticker": "005930"
+  },
+  {
+    "assetId": "2",
+    "assetType": "stock",
+    "classifications": {
+      "geography": "geo_kr",
+      "role": "role_growth",
+      "theme": "theme_power_infra"
+    },
+    "currency": "KRW",
+    "dataSource": {
+      "mode": "manual",
+      "provider": null
+    },
+    "isActive": true,
+    "name": "KODEX AI전력핵심설비",
+    "ticker": "487240"
+  },
+  {
+    "assetId": "3",
+    "assetType": "stock",
+    "classifications": {
+      "geography": "geo_kr",
+      "role": "role_growth",
+      "theme": "theme_defense_nuclear"
+    },
+    "currency": "KRW",
+    "dataSource": {
+      "mode": "manual",
+      "provider": null
+    },
+    "isActive": true,
+    "name": "Sol K방산",
+    "ticker": "490480"
   }
 ]

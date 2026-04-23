@@ -1,5 +1,3 @@
-import { readFile } from "node:fs/promises";
-import path from "node:path";
 import type {
   HoldingRow,
   LinkItem,
@@ -12,50 +10,10 @@ import type {
   PortfolioLatest,
   PortfolioTarget,
 } from "./types";
+import { readCsvFile, readJsonFile } from "./file-utils";
 
-const dataRoot = path.join(process.cwd(), "app-data");
-
-async function readJson<T>(relativePath: string): Promise<T> {
-  const file = await readFile(path.join(dataRoot, relativePath), "utf8");
-  return JSON.parse(file) as T;
-}
-
-export async function readCsv(relativePath: string) {
-  const file = await readFile(path.join(dataRoot, relativePath), "utf8");
-  const [headerLine, ...lines] = file.trim().split(/\r?\n/);
-  const headers = parseCsvLine(headerLine);
-
-  return lines.map((line) => {
-    const values = parseCsvLine(line);
-    return Object.fromEntries(headers.map((header, index) => [header, values[index] ?? ""]));
-  });
-}
-
-function parseCsvLine(line: string) {
-  const values: string[] = [];
-  let current = "";
-  let quoted = false;
-
-  for (let index = 0; index < line.length; index += 1) {
-    const char = line[index];
-    const next = line[index + 1];
-
-    if (char === '"' && quoted && next === '"') {
-      current += '"';
-      index += 1;
-    } else if (char === '"') {
-      quoted = !quoted;
-    } else if (char === "," && !quoted) {
-      values.push(current);
-      current = "";
-    } else {
-      current += char;
-    }
-  }
-
-  values.push(current);
-  return values;
-}
+export const readJson = readJsonFile;
+export const readCsv = readCsvFile;
 
 export async function getDashboardData() {
   const [marketSignal, macroLatest, macroDefinitions, portfolioLatest, links] =

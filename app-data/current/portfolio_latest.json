@@ -1,42 +1,148 @@
 {
-  "updatedAt": "2026-04-23T09:30:00+09:00",
-  "totalValueKrw": 253430000,
-  "weeklyChangePct": 1.42,
-  "profitLossKrw": 3531000,
-  "status": "watch",
-  "unclassifiedAssetCount": 0,
   "axisSummaries": [
     {
       "axisId": "geography",
       "axisName": "지역",
       "items": [
-        { "bucketId": "geo_kr", "name": "국내", "targetWeightPct": 50, "currentWeightPct": 38, "deviationPct": -12, "thresholdPct": 5, "status": "warning" },
-        { "bucketId": "geo_us", "name": "미국", "targetWeightPct": 20, "currentWeightPct": 32, "deviationPct": 12, "thresholdPct": 3, "status": "warning" },
-        { "bucketId": "geo_jp", "name": "일본", "targetWeightPct": 20, "currentWeightPct": 18, "deviationPct": -2, "thresholdPct": 3, "status": "ok" },
-        { "bucketId": "geo_hedge", "name": "헷지", "targetWeightPct": 10, "currentWeightPct": 12, "deviationPct": 2, "thresholdPct": 2, "status": "warning" }
+        {
+          "bucketId": "geo_kr",
+          "currentWeightPct": 62.9,
+          "deviationPct": 12.9,
+          "name": "국내",
+          "status": "warning",
+          "targetWeightPct": 50,
+          "thresholdPct": 5
+        },
+        {
+          "bucketId": "geo_us",
+          "currentWeightPct": 7.8,
+          "deviationPct": -12.2,
+          "name": "미국",
+          "status": "warning",
+          "targetWeightPct": 20,
+          "thresholdPct": 3
+        },
+        {
+          "bucketId": "geo_jp",
+          "currentWeightPct": 16.6,
+          "deviationPct": -3.4,
+          "name": "일본",
+          "status": "warning",
+          "targetWeightPct": 20,
+          "thresholdPct": 3
+        },
+        {
+          "bucketId": "geo_hedge",
+          "currentWeightPct": 12.6,
+          "deviationPct": 2.6,
+          "name": "헷지",
+          "status": "warning",
+          "targetWeightPct": 10,
+          "thresholdPct": 2
+        }
       ]
     },
     {
       "axisId": "theme",
       "axisName": "테마",
       "items": [
-        { "bucketId": "theme_semiconductor", "name": "반도체", "targetWeightPct": 30, "currentWeightPct": 34, "deviationPct": 4, "thresholdPct": 4, "status": "warning" },
-        { "bucketId": "theme_power_infra", "name": "전력/인프라", "targetWeightPct": 20, "currentWeightPct": 15, "deviationPct": -5, "thresholdPct": 4, "status": "warning" },
-        { "bucketId": "theme_defense_nuclear", "name": "방산/원자력", "targetWeightPct": 10, "currentWeightPct": 11, "deviationPct": 1, "thresholdPct": 3, "status": "ok" },
-        { "bucketId": "theme_bio", "name": "바이오", "targetWeightPct": 10, "currentWeightPct": 8, "deviationPct": -2, "thresholdPct": 3, "status": "ok" }
+        {
+          "bucketId": "theme_semiconductor",
+          "currentWeightPct": 20.3,
+          "deviationPct": -9.7,
+          "name": "반도체",
+          "status": "warning",
+          "targetWeightPct": 30,
+          "thresholdPct": 4
+        },
+        {
+          "bucketId": "theme_power_infra",
+          "currentWeightPct": 33.8,
+          "deviationPct": 13.8,
+          "name": "전력/인프라",
+          "status": "warning",
+          "targetWeightPct": 20,
+          "thresholdPct": 4
+        },
+        {
+          "bucketId": "theme_defense_nuclear",
+          "currentWeightPct": 45.4,
+          "deviationPct": 35.4,
+          "name": "방산/원자력",
+          "status": "warning",
+          "targetWeightPct": 10,
+          "thresholdPct": 3
+        },
+        {
+          "bucketId": "theme_bio",
+          "currentWeightPct": 0.5,
+          "deviationPct": -9.5,
+          "name": "바이오",
+          "status": "warning",
+          "targetWeightPct": 10,
+          "thresholdPct": 3
+        }
+      ]
+    },
+    {
+      "axisId": "role",
+      "axisName": "역할",
+      "items": [
+        {
+          "bucketId": "role_growth",
+          "currentWeightPct": 70.7,
+          "deviationPct": 20.7,
+          "name": "성장",
+          "status": "warning",
+          "targetWeightPct": 50,
+          "thresholdPct": 5
+        },
+        {
+          "bucketId": "role_defensive",
+          "currentWeightPct": 16.6,
+          "deviationPct": -3.4,
+          "name": "방어",
+          "status": "warning",
+          "targetWeightPct": 20,
+          "thresholdPct": 3
+        },
+        {
+          "bucketId": "role_dividend",
+          "currentWeightPct": 0,
+          "deviationPct": -10,
+          "name": "배당",
+          "status": "warning",
+          "targetWeightPct": 10,
+          "thresholdPct": 3
+        },
+        {
+          "bucketId": "role_hedge",
+          "currentWeightPct": 12.6,
+          "deviationPct": -7.4,
+          "name": "헷지",
+          "status": "warning",
+          "targetWeightPct": 20,
+          "thresholdPct": 2
+        }
       ]
     }
   ],
+  "profitLossKrw": 0,
+  "status": "watch",
   "topOverweight": {
-    "axisId": "geography",
-    "bucketId": "geo_us",
-    "name": "미국",
-    "deviationPct": 12
+    "axisId": "theme",
+    "bucketId": "theme_defense_nuclear",
+    "deviationPct": 35.4,
+    "name": "방산/원자력"
   },
   "topUnderweight": {
     "axisId": "geography",
-    "bucketId": "geo_kr",
-    "name": "국내",
-    "deviationPct": -12
-  }
+    "bucketId": "geo_us",
+    "deviationPct": -12.2,
+    "name": "미국"
+  },
+  "totalValueKrw": 94945500,
+  "unclassifiedAssetCount": 0,
+  "updatedAt": "2026-04-23T08:48:53.952Z",
+  "weeklyChangePct": 0
 }

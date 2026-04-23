@@ -1,0 +1,5 @@
+timestamp,asset_id,change_type,field_name,old_value,new_value,note
+2026-04-23T08:10:00+09:00,nvda,update,name,NVIDIA,NVIDIA Corp,
+2026-04-23T08:12:00+09:00,nvda,update,theme,theme_semiconductor,theme_power_infra,manual reclassification
+2026-04-23T08:20:00+09:00,soxx,deactivate,isActive,true,false,no longer tracked
+2026-04-23T08:46:53.849Z,nvda,deactivate,isActive,true,false,

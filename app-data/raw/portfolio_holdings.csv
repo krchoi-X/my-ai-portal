@@ -5,3 +5,9 @@ timestamp,asset_id,quantity,price,market_value_krw,source,input_type,note
 2026-04-23T09:30:00+09:00,kr_nuclear_etf,100,18000,1800000,manual,manual_entry,""
 2026-04-23T09:30:00+09:00,bio_etf,35,74,3500000,manual,manual_entry,""
 2026-04-23T09:30:00+09:00,kr_cash,1,12000000,12000000,manual,manual_entry,""
+2026-04-23T07:18:29.919Z,1,100,224000,22400000,manual,manual_entry,
+2026-04-23T07:20:22.521Z,2,100,42555,4255500,manual,manual_entry,
+2026-04-23T07:21:47.873Z,3,1000,41290,41290000,manual,manual_entry,
+2026-04-23T08:04:52.897Z,bio_etf,40,75,500000,manual,manual_entry,
+2026-04-23T08:28:13.650Z,nvda,5,890,9000000,manual,manual_entry,
+2026-04-23T08:48:53.947Z,1,50,224000,12400000,manual,manual_entry,
